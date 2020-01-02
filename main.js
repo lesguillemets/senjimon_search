@@ -45,19 +45,46 @@ function search_char() {
 	}
 }
 
+function clear_highlights() {
+	for (let node of document.getElementsByClassName("the-phrase")) {
+		node.classList.remove("the-phrase");
+		node.innerHTML = node.textContent;
+	}
+}
+
+function add_highlights() {
+	if (last_match_index < 0) { return false; }
+	let phrase_idx = Math.floor(last_match_index / 4);
+	let char_idx = last_match_index % 4;
+	let phrase_node = document.getElementsByClassName("senjimon")[phrase_idx];
+	phrase_node.classList.add("the-phrase");
+	/// FIXME
+	let the_phrase = phrase_node.textContent;
+	phrase_node.innerHTML = "".concat(
+		the_phrase.substring(0,char_idx),
+		"<char class='the-char'>",
+		the_phrase[char_idx],
+		"</char>",
+		the_phrase.substring(char_idx+1),
+	);
+}
+
 function update_view() {
 	document.getElementById("query").textContent = last_query;
 	document.getElementById("match-index").textContent = format_index(last_match_index);
 	document.getElementById("page").textContent = format_page_index(last_match_page);
 	document.getElementById("chars").textContent = format_index(last_match_loc_in_page);
+	clear_highlights();
 	if (last_match_index >= 0) {
 		let page_head = chars_per_page*last_match_page;
 		document.getElementById("the-page").textContent =
 			senjimon_text.substring(page_head, page_head + chars_per_page);
+		add_highlights();
 	} else {
 		document.getElementById("the-page").textContent = "(見つかりませんでした)";
 	}
 }
+
 
 function init() {
 	document.getElementById("execute").onclick = function() { search_char(); update_view(); return false; };

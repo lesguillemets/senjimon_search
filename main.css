@@ -35,7 +35,7 @@ p.the-phrase {
     background-color: rgba(229,192,152,80%);
 }
 
-span.the-char {
+.the-char {
     background-color: rgb(178, 255, 130);
     text-decoration:underline;
     font-weight:bold;
