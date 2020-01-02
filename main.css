@@ -1,0 +1,11 @@
+
+p.senjimon {
+    width:7em;
+    display:inline;
+    margin:0 0 0 0;
+    float:left;
+}
+
+p.senjimon:nth-child(4n+1) {
+    clear:left;
+}
