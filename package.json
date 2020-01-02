@@ -1,0 +1,19 @@
+{
+  "name": "search_senjimion",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lesguillemets/senjimon_search.git"
+  },
+  "author": "lesguillemets",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lesguillemets/senjimon_search/issues"
+  },
+  "homepage": "https://github.com/lesguillemets/senjimon_search#readme"
+}

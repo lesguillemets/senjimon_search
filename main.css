@@ -6,6 +6,7 @@ span.emem {
 	display:inline-block;
 	min-width:1.5em;
     text-decoration:underline;
+    text-align:center;
 }
 
 p.senjimon {
@@ -43,4 +44,19 @@ span.the-char {
 blockquote {
     width:500px;
     background-color:#eee;
+}
+
+.button {
+    margin:8px 4px 8px 4px;
+    padding:1px;
+    display:inline;
+    border-radius:3px;
+    background-color:#aee;
+    text-decoration:none;
+    border-right:1px solid #255;
+    border-bottom:1px solid #255;
+}
+
+.button:hover {
+    background-color:#9cc;
 }

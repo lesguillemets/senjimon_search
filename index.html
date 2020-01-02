@@ -4,6 +4,7 @@
 		<meta charset="UTF-8">
 		<title>千字文サーチ</title>
 		<link rel="stylesheet" href="./main.css">
+		<script src="./main.js"></script>
 	</head>
 	<body>
 		<div id="ask">
@@ -11,21 +12,24 @@
 				<li>探す文字: <input type="text" name="qchar" id="qchar" placeholder="一文字だけ"> </li>
 				<li>てもとの千字文は
 					<ul>
-						<li> 1ページに <input type="number" name="charpage" id="charpage" min="1"> 文字あって</li>
-						<li> <input type="number" name="initpage" id="initpage" min="1" > ページから始まります</li>
+						<li> 1ページに <input type="number" name="charpage" id="charpage" value="1" min="1" step="1"> 文字あって</li>
+						<li> <input type="number" name="initpage" id="initpage" value="1" min="1" step="1"> ページから始まります</li>
 					</ul>
 				</li>
+				<li> <button href="#" id="execute" class="button">Click してさがす</button></li>
 			</ul>
 		</div>
 		<div id="answer">
 			<p>
 				その字(<span class="emem" id="query"></span>)は
+				全体の
+				<span id="match-index" class="emem"></span>文字目，あなたの本では
 				<span class="emem" id="page"></span>ページの
 				<span class="emem" id="chars"></span> 文字目にあるようです
 			</p>
 			<p>
 				その頁のテキストはこうです
-				<blockquote id="the-page">f</blockquote>
+				<blockquote id="the-page"></blockquote>
 			</p>
 		</div>
 		<div id="senjimon-source">
