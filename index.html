@@ -6,6 +6,28 @@
 		<link rel="stylesheet" href="./main.css">
 	</head>
 	<body>
+		<div id="ask">
+			<ul>
+				<li>探す文字: <input type="text" name="qchar" id="qchar" placeholder="一文字だけ"> </li>
+				<li>てもとの千字文は
+					<ul>
+						<li> 1ページに <input type="number" name="charpage" id="charpage" min="1"> 文字あって</li>
+						<li> <input type="number" name="initpage" id="initpage" min="1" > ページから始まります</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="answer">
+			<p>
+				その字(<span class="emem" id="query"></span>)は
+				<span class="emem" id="page"></span>ページの
+				<span class="emem" id="chars"></span> 文字目にあるようです
+			</p>
+			<p>
+				その頁のテキストはこうです
+				<blockquote id="the-page">f</blockquote>
+			</p>
+		</div>
 		<div id="senjimon-source">
 			<p class="senjimon">天地玄黃</p>
 			<p class="senjimon">宇宙洪荒</p>
@@ -262,3 +284,4 @@
 
 	</body>
 </html>
+<!-- vim: set noexpandtab: -->

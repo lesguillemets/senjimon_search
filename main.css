@@ -1,11 +1,46 @@
+div#answer {
+	font-size:120%;
+    padding:10px;
+}
+span.emem {
+	display:inline-block;
+	min-width:1.5em;
+    text-decoration:underline;
+}
 
 p.senjimon {
     width:7em;
     display:inline;
     margin:0 0 0 0;
     float:left;
+    background-color: rgba(252, 232, 210, 30%);
 }
 
 p.senjimon:nth-child(4n+1) {
     clear:left;
+}
+
+#charpage {
+    width:3em;
+    font-weight:bold;
+}
+
+#initpage {
+    width:3em;
+    font-weight:bold;
+}
+
+p.the-phrase {
+    background-color: rgba(229,192,152,80%);
+}
+
+span.the-char {
+    background-color: rgb(178, 255, 130);
+    text-decoration:underline;
+    font-weight:bold;
+}
+
+blockquote {
+    width:500px;
+    background-color:#eee;
 }
